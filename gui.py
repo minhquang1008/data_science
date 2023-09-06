@@ -1,13 +1,11 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import squarify
 from datetime import datetime
 import re
 import pickle
-import os
 
 # 1. Read data
 st.title("Data Science Project")
@@ -16,6 +14,7 @@ uploaded_file_1 = st.file_uploader("Choose file", type=['txt','csv'])
 flag = 0
 if uploaded_file_1 is not None:
     df = pd.read_csv(uploaded_file_1, header = None)
+    df.to_csv("new_upload.csv", index = False)
     flag = 1
     st.write("###### Uploaded is in use")
 else:
