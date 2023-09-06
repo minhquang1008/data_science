@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run gui.py
+web: sh setup.sh && streamlit run gui.py --server.gatherUsageStats False
