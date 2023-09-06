@@ -14,7 +14,6 @@ uploaded_file_1 = st.file_uploader("Choose file", type=['txt','csv'])
 flag = 0
 if uploaded_file_1 is not None:
     df = pd.read_csv(uploaded_file_1, header = None)
-    df.to_csv("new_upload.csv", index = False)
     flag = 1
     st.write("###### Uploaded is in use")
 else:
